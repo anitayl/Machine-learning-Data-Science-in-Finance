@@ -26,12 +26,15 @@ x1t = Standardized difference between Estimize and Wall Street EPS Consensus of 
 x2 = Sector
 x3 = Number of Contributors
 x4 = Caps (using Shares Outstanding as proxy)
+
 <img width="468" alt="strategy" src="https://user-images.githubusercontent.com/102770592/223012597-83d9a8a0-9f50-4a77-b692-d51003740ced.png">
 ## Results
-Our trading portfolio results in an average of more than 100 trading days out of 250 available days. This means that we are on average trading around one time for every two days. Note that the years 2014 and 2021 do not have complete data points but only have data in the last and first halves of the years respectively. 
+Our trading portfolio results in an average of more than 100 trading days out of 250 available days. This means that we are on average trading around one time for every two days. 
 Even though there were roughly equal numbers of data points among different sectors in our dataframes, our portfolio sees a 68% share of information technology tickers, with the runner up, Industrial tickers, being a mere 13% of all the tickers traded by our portfolio. However, the same Industrial tickers seem to be more consistently traded as part of our portfolio than any other sector. Only some information technology companies are consistently traded: Microsoft and Cisco. This alludes to the possibility of more churn in the information technology sector, shorter lifetimes of companies in said sectors with more rapid growth and decline resulting in greater variability. 
+
 <img width="468" alt="EDA3" src="https://user-images.githubusercontent.com/102770592/223012580-bc578d5b-2b11-438a-865b-8e30a7f84f42.png">
-As we examine our cumulative portfolio returns and compare it with the market (see Exhibit 14), we see that the variation of our portfolio highly corresponds to that of the market. In particular, the dip at around trading day 620 happens during the pandemic and we could see a trend in our portfolio that the magnitudes of dips are much greater, but its resilience manifests in the rebound rise after the dips (also seen right after trading day 100). While on the daily level (see Exhibit 13), our initial portfolio strategy (light blue line in Exhibit 14) does not seem to do much better than the market (it mostly has greater volatility), if we tune the parameters as detailed in Section 4.4, the cumulative returns almost double. 
+
+As we examine our cumulative portfolio returns and compare it with the market , we see that the variation of our portfolio highly corresponds to that of the market. In particular, the dip at around trading day 620 happens during the pandemic and we could see a trend in our portfolio that the magnitudes of dips are much greater, but its resilience manifests in the rebound rise after the dips (also seen right after trading day 100). While on the daily level , our initial portfolio strategy (light blue line) does not seem to do much better than the market (it mostly has greater volatility), if we tune the parameters, the cumulative returns almost double. 
 
 (Dark Blue) Our best portfolio cumulative returns after tuning top x tickers, which x variables to include/exclude, trading pool having at least x tickers, selecting positive predicted returns only; (Light Blue) Intermediate strategy portfolio returns; (Red) Cumulative market returns.
 
