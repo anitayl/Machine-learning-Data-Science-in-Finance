@@ -16,6 +16,7 @@ Our statistics show Estimize eps performance varies by sector
 
 ## Strategy
 We built a regression model to do our analysis by regressing the 5-day compound return with EPS differentiation, sector, number of contributors and market cap. To avoid look-ahead bias, we made predictions by rolling out samples. Our strategy is to make predictions of the stocks which will make their announcement in four days(day 4) and build a portfolio of the top-5 stocks with highest predicted returns and trade them between day 1 and day 5. We then use the equal-weighted actual compound returns of this portfolio to compare with our benchmark S&P 500 to see by how much our strategy outperforms the market.
+
 We define our regressions model as follows:
 y = α+β1x1t + β2x2+β3x3+β4x4
 The dependent variable is the excess return for the short-period return around earnings days, from t = 1 to t = 5 where the earnings announcement is at t = 4. We calculate the excess return by subtracting the risk-free rate from the daily return and compounding it over the 5 day period:
@@ -28,6 +29,7 @@ x3 = Number of Contributors
 x4 = Caps (using Shares Outstanding as proxy)
 
 <img width="468" alt="strategy" src="https://user-images.githubusercontent.com/102770592/223012597-83d9a8a0-9f50-4a77-b692-d51003740ced.png">
+
 ## Results
 Our trading portfolio results in an average of more than 100 trading days out of 250 available days. This means that we are on average trading around one time for every two days. 
 Even though there were roughly equal numbers of data points among different sectors in our dataframes, our portfolio sees a 68% share of information technology tickers, with the runner up, Industrial tickers, being a mere 13% of all the tickers traded by our portfolio. However, the same Industrial tickers seem to be more consistently traded as part of our portfolio than any other sector. Only some information technology companies are consistently traded: Microsoft and Cisco. This alludes to the possibility of more churn in the information technology sector, shorter lifetimes of companies in said sectors with more rapid growth and decline resulting in greater variability. 
