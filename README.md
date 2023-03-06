@@ -11,6 +11,7 @@ Our statistics show only a small fraction of the estimates have contributors lar
 <img width="441" alt="EDA1" src="https://user-images.githubusercontent.com/102770592/223012263-3a88ad4f-a7a4-4f38-abe3-6eef27b6c657.png">
 
 Our statistics show Estimize eps performance varies by sector
+
 <img width="443" alt="EDA2" src="https://user-images.githubusercontent.com/102770592/223012565-2046b00c-546f-4c31-9e6f-dc0c5085d143.png">
 
 ## Strategy
@@ -19,4 +20,5 @@ We built a regression model to do our analysis by regressing the 5-day compound 
 ## Conclusion
 After running our regression model and performing our strategy using the model, three conclusions are drawn. Firstly, EPS difference can provide enough information to achieve abnormal returns. Secondly, Estimize data is more accurate for certain sectors and with more contributors. Thirdly, large market caps contribute more prediction power to returns.
 <img width="468" alt="EDA3" src="https://user-images.githubusercontent.com/102770592/223012580-bc578d5b-2b11-438a-865b-8e30a7f84f42.png">
+(Dark Blue) Our best portfolio cumulative returns after tuning top x tickers, which x variables to include/exclude, trading pool having at least x tickers, selecting positive predicted returns only; (Light Blue) Intermediate strategy portfolio returns; (Red) Cumulative market returns.
 <img width="363" alt="results" src="https://user-images.githubusercontent.com/102770592/223012595-f5e9633e-819c-4173-a3fb-ea9dff4d7207.png">
