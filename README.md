@@ -58,6 +58,8 @@ Even though there were roughly equal numbers of data points among different sect
 
 As we examine our cumulative portfolio returns and compare it with the market , we see that the variation of our portfolio highly corresponds to that of the market. In particular, the dip at around trading day 620 happens during the pandemic and we could see a trend in our portfolio that the magnitudes of dips are much greater, but its resilience manifests in the rebound rise after the dips (also seen right after trading day 100). While on the daily level , our initial portfolio strategy (light blue line) does not seem to do much better than the market (it mostly has greater volatility), if we tune the parameters, the cumulative returns almost double. 
 
+Our best portfolio cumulative returns outperforms the market by 7.12% on average.
+
 (Dark Blue) Our best portfolio cumulative returns after tuning top x tickers, which x variables to include/exclude, trading pool having at least x tickers, selecting positive predicted returns only; 
 
 (Light Blue) Intermediate strategy portfolio returns; 
