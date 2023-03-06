@@ -6,6 +6,10 @@ Estimize is a data company that owns a platform for all its users to make daily 
 ## Data Source
 Our primary dataset is Estimize Consensus Equity data, which contains 6,264k data of 10 sectors, 66 industries and 2738 companies from 2011 to 2022. We also use Wharton Research Data Services (WRDS) as our alternative dataset. Our variables include Estimize Consensus EPS forecast, number of contributors, Wall Street EPS forecast, daily return, sector and market cap. 
 The file final_df in the dataset is the final version of our data we used for our further model building, after cleaning and merging through our raw data.
+## Exploratory Data Analysis of Estimize Data
+<img width="441" alt="EDA1" src="https://user-images.githubusercontent.com/102770592/223012263-3a88ad4f-a7a4-4f38-abe3-6eef27b6c657.png">
+
+
 ## Strategy
 We built a regression model to do our analysis by regressing the 5-day compound return with EPS differentiation, sector, number of contributors and market cap. To avoid look-ahead bias, we made predictions by rolling out samples. Our strategy is to make predictions of the stocks which will make their announcement in four days(day 4) and build a portfolio of the top-5 stocks with highest predicted returns and trade them between day 1 and day 5. We then use the equal-weighted actual compound returns of this portfolio to compare with our benchmark S&P 500 to see by how much our strategy outperforms the market.
 ## Conclusion
