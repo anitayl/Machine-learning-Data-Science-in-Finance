@@ -23,9 +23,13 @@ The dependent variable is the excess return for the short-period return around e
 
 y = (R(t+1)- Ri(t+1) +1) * (R(t+2)- Ri(t+2) +1) * (R(t+3)- Ri(t+3) +1) *(Rt+4-Ri(t+4)+1) * (R(t+5)- Ri(t+5) +1)-1
 The independent variables we used are the following:
+
 x1t = Standardized difference between Estimize and Wall Street EPS Consensus of today (t)
+
 x2 = Sector
+
 x3 = Number of Contributors
+
 x4 = Caps (using Shares Outstanding as proxy)
 
 <img width="468" alt="strategy" src="https://user-images.githubusercontent.com/102770592/223012597-83d9a8a0-9f50-4a77-b692-d51003740ced.png">
@@ -41,3 +45,7 @@ As we examine our cumulative portfolio returns and compare it with the market , 
 (Dark Blue) Our best portfolio cumulative returns after tuning top x tickers, which x variables to include/exclude, trading pool having at least x tickers, selecting positive predicted returns only; (Light Blue) Intermediate strategy portfolio returns; (Red) Cumulative market returns.
 
 <img width="363" alt="results" src="https://user-images.githubusercontent.com/102770592/223012595-f5e9633e-819c-4173-a3fb-ea9dff4d7207.png">
+
+## Conclusion
+After running our regression model and performing our strategy using the model, three conclusions are drawn. Firstly, EPS difference can provide enough information to achieve abnormal returns. Secondly, Estimize data is more accurate for certain sectors and with more contributors. Thirdly, large market caps contribute more prediction power to returns.
+
