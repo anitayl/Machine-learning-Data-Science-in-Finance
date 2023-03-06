@@ -1,4 +1,4 @@
-# Machine-learning-Data Science in Finance
+# Machine-learning-The power of unbiased market forecast
 ## Goal
 This is a Wharton capstone project that cooperates with Estimize.We use their stock market consensus data, comparing with Wall Street Forecasts to build a portfolio strategy to see whether we could generate abnormal returns. 
 ## Introduction
