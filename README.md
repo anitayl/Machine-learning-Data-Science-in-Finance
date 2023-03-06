@@ -10,6 +10,3 @@ The file final_df in the dataset is the final version of our data we used for ou
 We built a regression model to do our analysis by regressing the 5-day compound return with EPS differentiation, sector, number of contributors and market cap. To avoid look-ahead bias, we made predictions by rolling out samples. Our strategy is to make predictions of the stocks which will make their announcement in four days(day 4) and build a portfolio of the top-5 stocks with highest predicted returns and trade them between day 1 and day 5. We then use the equal-weighted actual compound returns of this portfolio to compare with our benchmark S&P 500 to see by how much our strategy outperforms the market.
 ## Conclusion
 After running our regression model and performing our strategy using the model, three conclusions are drawn. Firstly, EPS difference can provide enough information to achieve abnormal returns. Secondly, Estimize data is more accurate for certain sectors and with more contributors. Thirdly, large market caps contribute more prediction power to returns.
-
-
-
