@@ -16,9 +16,23 @@ Our statistics show Estimize eps performance varies by sector
 
 ## Strategy
 We built a regression model to do our analysis by regressing the 5-day compound return with EPS differentiation, sector, number of contributors and market cap. To avoid look-ahead bias, we made predictions by rolling out samples. Our strategy is to make predictions of the stocks which will make their announcement in four days(day 4) and build a portfolio of the top-5 stocks with highest predicted returns and trade them between day 1 and day 5. We then use the equal-weighted actual compound returns of this portfolio to compare with our benchmark S&P 500 to see by how much our strategy outperforms the market.
+We define our regressions model as follows:
+y = α+β1x1t + β2x2+β3x3+β4x4
+The dependent variable is the excess return for the short-period return around earnings days, from t = 1 to t = 5 where the earnings announcement is at t = 4. We calculate the excess return by subtracting the risk-free rate from the daily return and compounding it over the 5 day period:
+
+y = (R(t+1)- Ri(t+1) +1) * (R(t+2)- Ri(t+2) +1) * (R(t+3)- Ri(t+3) +1) *(Rt+4-Ri(t+4)+1) * (R(t+5)- Ri(t+5) +1)-1
+The independent variables we used are the following:
+x1t = Standardized difference between Estimize and Wall Street EPS Consensus of today (t)
+x2 = Sector
+x3 = Number of Contributors
+x4 = Caps (using Shares Outstanding as proxy)
 <img width="468" alt="strategy" src="https://user-images.githubusercontent.com/102770592/223012597-83d9a8a0-9f50-4a77-b692-d51003740ced.png">
-## Conclusion
-After running our regression model and performing our strategy using the model, three conclusions are drawn. Firstly, EPS difference can provide enough information to achieve abnormal returns. Secondly, Estimize data is more accurate for certain sectors and with more contributors. Thirdly, large market caps contribute more prediction power to returns.
+## Results
+Our trading portfolio results in an average of more than 100 trading days out of 250 available days. This means that we are on average trading around one time for every two days. Note that the years 2014 and 2021 do not have complete data points but only have data in the last and first halves of the years respectively. 
+Even though there were roughly equal numbers of data points among different sectors in our dataframes, our portfolio sees a 68% share of information technology tickers, with the runner up, Industrial tickers, being a mere 13% of all the tickers traded by our portfolio. However, the same Industrial tickers seem to be more consistently traded as part of our portfolio than any other sector. Only some information technology companies are consistently traded: Microsoft and Cisco. This alludes to the possibility of more churn in the information technology sector, shorter lifetimes of companies in said sectors with more rapid growth and decline resulting in greater variability. 
 <img width="468" alt="EDA3" src="https://user-images.githubusercontent.com/102770592/223012580-bc578d5b-2b11-438a-865b-8e30a7f84f42.png">
+As we examine our cumulative portfolio returns and compare it with the market (see Exhibit 14), we see that the variation of our portfolio highly corresponds to that of the market. In particular, the dip at around trading day 620 happens during the pandemic and we could see a trend in our portfolio that the magnitudes of dips are much greater, but its resilience manifests in the rebound rise after the dips (also seen right after trading day 100). While on the daily level (see Exhibit 13), our initial portfolio strategy (light blue line in Exhibit 14) does not seem to do much better than the market (it mostly has greater volatility), if we tune the parameters as detailed in Section 4.4, the cumulative returns almost double. 
+
 (Dark Blue) Our best portfolio cumulative returns after tuning top x tickers, which x variables to include/exclude, trading pool having at least x tickers, selecting positive predicted returns only; (Light Blue) Intermediate strategy portfolio returns; (Red) Cumulative market returns.
+
 <img width="363" alt="results" src="https://user-images.githubusercontent.com/102770592/223012595-f5e9633e-819c-4173-a3fb-ea9dff4d7207.png">
