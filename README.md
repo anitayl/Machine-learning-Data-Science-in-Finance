@@ -7,7 +7,9 @@ Estimize is a data company that owns a platform for all its users to make daily 
 Our primary dataset is Estimize Consensus Equity data, which contains 6,264k data of 10 sectors, 66 industries and 2738 companies from 2011 to 2022. We also use Wharton Research Data Services (WRDS) as our alternative dataset. Our variables include Estimize Consensus EPS forecast, number of contributors, Wall Street EPS forecast, daily return, sector and market cap. 
 The file final_df in the dataset is the final version of our data we used for our further model building, after cleaning and merging through our raw data.
 ## Exploratory Data Analysis of Estimize Data
+Our statistics show only a small fraction of the estimates have contributors larger than 20
 <img width="441" alt="EDA1" src="https://user-images.githubusercontent.com/102770592/223012263-3a88ad4f-a7a4-4f38-abe3-6eef27b6c657.png">
+Our statistics show Estimize eps performance varies by sector
 
 
 ## Strategy
