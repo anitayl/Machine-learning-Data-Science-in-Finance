@@ -35,14 +35,16 @@ x4 = Caps (using Shares Outstanding as proxy)
 <img width="468" alt="strategy" src="https://user-images.githubusercontent.com/102770592/223012597-83d9a8a0-9f50-4a77-b692-d51003740ced.png">
 
 ## Improvement Techniques
+We implemented several techniques in improving our strategies. This was built on top of the previous framework and analysis. 
 
-Fix a window of 250 tradings days (calendar year) to run rolling-window OLS regressions instead of looking at all previous history
-Only build a portfolio if there are at least 10 positive return predictions on that day. Otherwise, we skip that day and continue on to the next day.
-Create a grid of variables to modify one-by-one, similar to how hyperparameter tuning is done in machine learning models, except this is a brute force for loop over for loop, one for each variable. Our parameters to tune are:
-Top x tickers to choose (here we started with x = 5)
-Which x variables to include / exclude; we chose 3 subsets of combinations
-Trading pool must contain at least x positive return predictions (here we started with x = 10)
-The size of the window in number of trading days (we started with 250)
+1. Fix a window of 250 tradings days (calendar year) to run rolling-window OLS regressions instead of looking at all previous history
+2. Only build a portfolio if there are at least 10 positive return predictions on that day. Otherwise, we skip that day and continue on to the next day.
+3. Create a grid of variables to modify one-by-one, similar to how hyperparameter tuning is done in machine learning models, except this is a brute force for loop over for loop, one for each variable. 
+Our parameters to tune are:
+1. Top x tickers to choose (here we started with x = 5)
+2. Which x variables to include / exclude; we chose 3 subsets of combinations
+3. Trading pool must contain at least x positive return predictions (here we started with x = 10)
+4. The size of the window in number of trading days (we started with 250)
 
 
 ## Results
